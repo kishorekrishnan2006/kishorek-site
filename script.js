@@ -314,7 +314,7 @@ document.getElementById('backToTop').addEventListener('click', () => {
         name: name,
         email: email,
         subject: subject,
-        message: message
+        message: message,
         redirect: 'https://kishorek.site'
       })
     })
