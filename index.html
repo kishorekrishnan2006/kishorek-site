@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Kishore K – Information Technology Student, Web Developer & Software Developer at M. Kumarasamy College of Engineering." />
+  <meta name="keywords" content="Kishore K, IT Student, Web Developer, Software Developer, Portfolio" />
+  <meta name="author" content="Kishore K" />
+  <title>Kishore K | IT Student & Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- ========== LOADING SCREEN ========== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <span class="loader-text">KK</span>
+    </div>
+    <p class="loader-subtitle">Initializing Portfolio...</p>
+  </div>
+
+  <!-- ========== CUSTOM CURSOR ========== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- ========== PARTICLES CANVAS ========== -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="brand-bracket">&lt;</span>KK<span class="brand-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
+      <li><a href="#certifications" class="nav-link">Certs</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-text reveal">
+        <p class="hero-greeting">Hello, World! 👋</p>
+        <h1 class="hero-name">Kishore <span class="accent">K</span></h1>
+        <div class="hero-role">
+          <span class="role-prefix">I'm a </span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="cursor-blink">|</span>
+        </div>
+        <p class="hero-intro">
+          Crafting digital experiences at the intersection of creativity and code.
+          Passionate about building robust web applications, scalable software solutions,
+          and exploring the depths of Linux & DevOps.
+        </p>
+        <div class="hero-cta">
+          <a href="resume.pdf" target="_blank" class="btn btn-primary">
+            <i class='bx bx-show'></i> View Resume
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class='bx bx-envelope'></i> Contact Me
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/kishorekrishnan2006" target="_blank" class="social-icon" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+          <a href="https://www.linkedin.com/in/kishore-k-2040ab32a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+          <a href="mailto:kishore20061127@email.com" class="social-icon" aria-label="Email"><i class='bx bx-envelope'></i></a>
+          <a href="https://www.instagram.com/_mr_kishore.__?igsh=MXE2YjZybzFlZ2F5cw==" target="_blank" class="social-icon" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+        </div>
+      </div>
+      <div class="hero-image reveal">
+        <div class="image-frame">
+          <div class="image-glow"></div>
+          <img src="assets/profile.jpg" alt="Kishore K" />
+          <div class="orbit orbit-1"><span class="orbit-dot"></span></div>
+          <div class="orbit orbit-2"><span class="orbit-dot"></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Get to know me</p>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-card glass reveal">
+          <div class="about-card-icon"><i class='bx bx-code-alt'></i></div>
+          <h3>Web Developer</h3>
+          <p>Building responsive, modern web experiences using HTML, CSS, and JavaScript. I love turning ideas into
+            pixel-perfect interfaces.</p>
+        </div>
+        <div class="about-card glass reveal">
+          <div class="about-card-icon"><i class='bx bx-laptop'></i></div>
+          <h3>Software Developer</h3>
+          <p>Designing clean, efficient software solutions with Python and Java. From algorithms to full applications, I
+            enjoy every step of the build.</p>
+        </div>
+        <div class="about-card glass reveal">
+          <div class="about-card-icon"><i class='bx bx-cloud'></i></div>
+          <h3>Cloud & Linux Enthusiast</h3>
+          <p>Comfortable in the terminal. I explore Linux systems, shell scripting, and DevOps practices to build and
+            deploy reliable environments.</p>
+        </div>
+      </div>
+      <div class="about-bio glass reveal">
+        <div class="bio-content">
+          <h3>A Little More About Me</h3>
+          <p>
+            I'm <strong>Kishore K</strong>, an Information Technology undergraduate at
+            <strong>M. Kumarasamy College of Engineering</strong> with a strong passion for software development, cloud computing, and emerging technologies. I enjoy building web applications using Python and Flask while continuously expanding my knowledge of AWS cloud services and Linux systems.
+          </p>
+          <p>
+            Through academic projects, technical events, and internship experience, I have gained hands-on exposure to web development, AWS EC2 deployment, Linux administration, and problem-solving. I am committed to developing efficient, scalable solutions and continuously improving my technical skills.
+          </p>
+          <div class="bio-details">
+            <div class="bio-item"><i class='bx bx-map'></i><span>Tamil Nadu, India</span></div>
+            <div class="bio-item"><i class='bx bx-graduation'></i><span>M. Kumarasamy College of Engineering</span>
+            </div>
+            <div class="bio-item"><i class='bx bx-book-open'></i><span>B.Tech Information Technology</span></div>
+            <div class="bio-item"><i class='bx bx-briefcase'></i><span>Open to Internships & Opportunities</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS SECTION ========== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">What I work with</p>
+        <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <!-- Skill bars -->
+        <div class="skill-item glass reveal" style="padding-bottom: 24px;">
+          <div class="skill-header" style="margin-bottom: 8px;">
+            <span class="skill-icon"><i class='bx bx-code-alt'></i></span>
+            <span class="skill-name" style="font-size: 1.1rem;">Programming</span>
+          </div>
+          <div class="timeline-tags" style="margin-top: 12px;">
+            <span>Python</span><span>Java</span><span>C</span>
+          </div>
+        </div>
+        <div class="skill-item glass reveal" style="padding-bottom: 24px;">
+          <div class="skill-header" style="margin-bottom: 8px;">
+            <span class="skill-icon"><i class='bx bx-laptop'></i></span>
+            <span class="skill-name" style="font-size: 1.1rem;">Web Technologies</span>
+          </div>
+          <div class="timeline-tags" style="margin-top: 12px;">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Flask</span>
+          </div>
+        </div>
+        <div class="skill-item glass reveal" style="padding-bottom: 24px;">
+          <div class="skill-header" style="margin-bottom: 8px;">
+            <span class="skill-icon"><i class='bx bx-data'></i></span>
+            <span class="skill-name" style="font-size: 1.1rem;">Database</span>
+          </div>
+          <div class="timeline-tags" style="margin-top: 12px;">
+            <span>MySQL</span><span>SQLite</span>
+          </div>
+        </div>
+        <div class="skill-item glass reveal" style="padding-bottom: 24px;">
+          <div class="skill-header" style="margin-bottom: 8px;">
+            <span class="skill-icon"><i class='bx bx-cloud'></i></span>
+            <span class="skill-name" style="font-size: 1.1rem;">Cloud Computing</span>
+          </div>
+          <div class="timeline-tags" style="margin-top: 12px;">
+            <span>AWS EC2</span>
+          </div>
+        </div>
+        <div class="skill-item glass reveal" style="padding-bottom: 24px;">
+          <div class="skill-header" style="margin-bottom: 8px;">
+            <span class="skill-icon"><i class='bx bxl-tux'></i></span>
+            <span class="skill-name" style="font-size: 1.1rem;">Operating Systems</span>
+          </div>
+          <div class="timeline-tags" style="margin-top: 12px;">
+            <span>Linux (Ubuntu)</span>
+          </div>
+        </div>
+        <div class="skill-item glass reveal" style="padding-bottom: 24px;">
+          <div class="skill-header" style="margin-bottom: 8px;">
+            <span class="skill-icon"><i class='bx bx-wrench'></i></span>
+            <span class="skill-name" style="font-size: 1.1rem;">Tools</span>
+          </div>
+          <div class="timeline-tags" style="margin-top: 12px;">
+            <span>Git</span><span>GitHub</span><span>SSH</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION SECTION ========== -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">My academic journey</p>
+        <h2 class="section-title">Edu<span class="accent">cation</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="timeline-badge current">Current</span>
+            <h3>B.Tech Information Technology</h3>
+            <div style="margin-bottom: 12px; margin-top: 4px; font-size: 0.95rem; color: var(--text-secondary);">
+              <div style="margin-bottom: 6px;">🎓 Information Technology</div>
+              <div style="margin-bottom: 6px;">📍 M. Kumarasamy College of Engineering</div>
+              <div style="margin-bottom: 6px;">⭐ CGPA: 8.3/10.0</div>
+            </div>
+            <p class="timeline-date"><i class='bx bx-calendar'></i> 2024 – 2028</p>
+            <p style="margin-bottom: 8px;"><strong>Academic Focus:</strong> Software Development, Web Technologies, Database Management, Cloud Computing, and Linux Systems.</p>
+            <p><strong>Relevant Coursework:</strong> Data Structures • DBMS • Operating Systems • Computer Networks • Web Development</p>
+            <div class="timeline-tags">
+              <span>Python</span><span>DBMS</span><span>OS</span><span>CN</span><span>Web Dev</span><span>AWS</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="timeline-badge">Higher Secondary</span>
+            <h3>Higher Secondary Education (HSC)</h3>
+            <h4>Computer Science Stream</h4>
+            <p class="timeline-date"><i class='bx bx-calendar'></i> 2022 – 2024</p>
+            <p style="margin-bottom: 8px;"><strong>Percentage:</strong> 85.16%</p>
+            <p>Completed HSC with Computer Science, Mathematics, and Physics. Developed a strong foundation in
+              programming fundamentals and problem-solving.</p>
+            <div class="timeline-tags">
+              <span>Computer Science</span><span>Mathematics</span><span>Physics</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="timeline-badge">Secondary</span>
+            <h3>Secondary School Education (SSLC)</h3>
+            <h4>State Board</h4>
+            <p class="timeline-date"><i class='bx bx-calendar'></i> 2021 – 2022</p>
+            <p style="margin-bottom: 8px;"><strong>Percentage:</strong> 70%</p>
+            <p>Completed SSLC with distinction. Showcased academic consistency and discipline across all core subjects.
+            </p>
+            <div class="timeline-tags">
+              <span>Science</span><span>Mathematics</span><span>Tamil</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE SECTION ========== -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Where I've worked</p>
+        <h2 class="section-title">Experi<span class="accent">ence</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass">
+            <span class="timeline-badge current">Internship</span>
+            <h3>Software Developer Intern</h3>
+            <h4>SkyneTBee Artificial Intelligence Enterprise Pvt. Ltd.</h4>
+            <p class="timeline-date"><i class='bx bx-calendar'></i> June 2026 – July 2026</p>
+            <ul style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin-bottom: 18px; padding-left: 20px; list-style-type: disc;">
+              <li>Gained practical experience in software development and web application deployment.</li>
+              <li>Worked with Python, Flask, and database management systems.</li>
+              <li>Learned cloud computing concepts and server deployment using AWS EC2.</li>
+              <li>Managed Linux-based environments and performed basic system administration tasks.</li>
+              <li>Configured remote servers using SSH and handled deployment-related activities.</li>
+              <li>Enhanced problem-solving, debugging, and teamwork skills through real-world projects.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>Python</span><span>Flask</span><span>AWS EC2</span><span>Linux</span><span>SSH</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">What I've built</p>
+        <h2 class="section-title">My <span class="accent">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card glass reveal">
+          <div class="project-image">
+            <div class="project-image-placeholder" style="--proj-color: #0ea5e9;">
+              <i class='bx bx-group'></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn" target="_blank"><i class='bx bx-link-external'></i> Live Demo</a>
+              <a href="https://github.com/kishorekrishnan2006" class="overlay-btn" target="_blank"><i class='bx bxl-github'></i>
+                GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Employee Management System</h3>
+            <p>A full-stack web application to manage employee records, attendance, payroll, and department details with
+              role-based access control and a clean admin dashboard.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card glass reveal featured">
+          <div class="project-badge">Featured</div>
+          <div class="project-image">
+            <div class="project-image-placeholder" style="--proj-color: #8b5cf6;">
+              <i class='bx bx-building-house'></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn" target="_blank"><i class='bx bx-link-external'></i> Live Demo</a>
+              <a href="https://github.com/kishorekrishnan2006" class="overlay-btn" target="_blank"><i class='bx bxl-github'></i>
+                GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>DormSync – Smart Hostel Management</h3>
+            <p>An intelligent hostel management platform featuring room allocation, student records, fee management,
+              complaint tracking, and real-time notifications for hostel administrators and students.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card glass reveal">
+          <div class="project-image">
+            <div class="project-image-placeholder" style="--proj-color: #10b981;">
+              <i class='bx bx-grid-alt'></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="overlay-btn" target="_blank"><i class='bx bx-link-external'></i> Live Demo</a>
+              <a href="https://github.com/kishorekrishnan2006" class="overlay-btn" target="_blank"><i class='bx bxl-github'></i>
+                GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Tic Tac Toe Web Application</h3>
+            <p>An interactive two-player Tic Tac Toe game built with vanilla JavaScript featuring smooth animations, win
+              detection, score tracking, and a responsive grid that works on all devices.</p>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ACHIEVEMENTS SECTION ========== -->
+  <section class="section section-alt" id="achievements">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">What I've earned</p>
+        <h2 class="section-title">Achie<span class="accent">vements</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="achievements-grid">
+        <div class="achievement-card glass reveal">
+          <div class="achievement-icon" style="--ach-color: #f59e0b;"><i class='bx bx-trophy'></i></div>
+          <h3>Code Rewind Competition</h3>
+          <p>Award Recipient &ndash; TRENZ'25<br><strong>2025</strong></p>
+        </div>
+        <div class="achievement-card glass reveal">
+          <div class="achievement-icon" style="--ach-color: #ec4899;"><i class='bx bx-chalkboard'></i></div>
+          <h3>National-Level Paper Presentation</h3>
+          <p>Kongu Engineering College<br><strong>2025</strong></p>
+        </div>
+        <div class="achievement-card glass reveal">
+          <div class="achievement-icon" style="--ach-color: #0ea5e9;"><i class='bx bx-code-alt'></i></div>
+          <h3>24-Hour Hackathon</h3>
+          <p>KPR Institute of Engineering and Technology<br><strong>2025</strong></p>
+        </div>
+        <div class="achievement-card glass reveal">
+          <div class="achievement-icon" style="--ach-color: #10b981;"><i class='bx bx-code-curly'></i></div>
+          <h3>Code Clash Competition</h3>
+          <p>National-Level Symposium<br><strong>2025</strong></p>
+        </div>
+        <div class="achievement-card glass reveal">
+          <div class="achievement-icon" style="--ach-color: #8b5cf6;"><i class='bx bx-laptop'></i></div>
+          <h3>24-Hour Hackathon</h3>
+          <p>KANAM'26 National-Level Tech Fest<br><strong>2026</strong></p>
+        </div>
+        <div class="achievement-card glass reveal">
+          <div class="achievement-icon" style="--ach-color: #f43f5e;"><i class='bx bx-group'></i></div>
+          <h3>Technical Event Participant</h3>
+          <p>Inter-College Competitions<br><strong>2025-2026</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CERTIFICATIONS SECTION ========== -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Verified credentials</p>
+        <h2 class="section-title">Certifi<span class="accent">cations</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card glass reveal">
+          <div class="cert-ribbon"></div>
+          <div class="cert-icon"><i class='bx bx-certification'></i></div>
+          <h3>Introduction to Industry 4.0 and Industrial Internet of Things</h3>
+          <p class="cert-issuer">NPTEL Elite</p>
+          <p class="cert-year">2026</p>
+          <div class="cert-badge"><i class='bx bx-check-circle'></i> Verified</div>
+        </div>
+        <div class="cert-card glass reveal">
+          <div class="cert-ribbon"></div>
+          <div class="cert-icon"><i class='bx bx-certification'></i></div>
+          <h3>Introduction to Internet of Things</h3>
+          <p class="cert-issuer">NPTEL Elite</p>
+          <p class="cert-year">2025</p>
+          <div class="cert-badge"><i class='bx bx-check-circle'></i> Verified</div>
+        </div>
+        <div class="cert-card glass reveal">
+          <div class="cert-ribbon"></div>
+          <div class="cert-icon"><i class='bx bx-certification'></i></div>
+          <h3>Enhancing Soft Skills and Personality</h3>
+          <p class="cert-issuer">NPTEL</p>
+          <p class="cert-year">2025</p>
+          <div class="cert-badge"><i class='bx bx-check-circle'></i> Verified</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== STATS SECTION ========== -->
+  <section class="section stats-section" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="5">0</span>
+          <span class="stat-plus">+</span>
+          <p>Projects Completed</p>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="8">0</span>
+          <span class="stat-plus">+</span>
+          <p>Technologies Learned</p>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="6">0</span>
+          <span class="stat-plus">+</span>
+          <p>Certifications</p>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="10">0</span>
+          <span class="stat-plus">+</span>
+          <p>Workshops Attended</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Let's build something</p>
+        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info reveal">
+          <h3>Open to Opportunities</h3>
+          <p>Whether you have a project idea, internship offer, or just want to say hi — my inbox is always open. I'll
+            respond as soon as possible.</p>
+          <div class="contact-details">
+            <a href="mailto:kishore20061127@email.com" class="contact-link glass">
+              <i class='bx bx-envelope'></i>
+              <span>kishore20061127@email.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/kishore-k-2040ab32a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="contact-link glass">
+              <i class='bx bxl-linkedin'></i>
+              <span>LinkedIn Profile</span>
+            </a>
+            <a href="https://github.com/kishorekrishnan2006" target="_blank" class="contact-link glass">
+              <i class='bx bxl-github'></i>
+              <span>github.com/kishorekrishnan2006</span>
+            </a>
+          </div>
+        </div>
+        <form class="contact-form glass reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class='bx bx-send'></i> Send Message
+          </button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="brand-bracket">&lt;</span>KK<span class="brand-bracket">/&gt;</span>
+          <p>Kishore K — IT Student & Developer</p>
+        </div>
+        <nav class="footer-nav">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer-socials">
+          <a href="https://github.com/kishorekrishnan2006" target="_blank" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+          <a href="https://www.linkedin.com/in/kishore-k-2040ab32a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+          <a href="mailto:kishore20061127@email.com" aria-label="Email"><i class='bx bx-envelope'></i></a>
+          <a href="https://www.instagram.com/_mr_kishore.__?igsh=MXE2YjZybzFlZ2F5cw==" target="_blank" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Kishore K. Software Developer | IT Student.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class='bx bx-chevron-up'></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
